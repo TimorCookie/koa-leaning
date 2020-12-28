@@ -24,9 +24,8 @@
 const JKoa = require('./JKoa')
 const app = new JKoa()
 
-app.use((req, res) => {
-  res.writeHead(200); 
-  res.end("hello timokie");
+app.use((ctx) => {
+  ctx.body = 'hello, timokie'
 });
 
 app.listen(8081, () => {
